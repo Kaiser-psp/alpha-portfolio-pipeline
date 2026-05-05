@@ -1,0 +1,13 @@
+{
+  "portfolio_id": "alpha_001",
+  "snapshots": [],
+  "schema": {
+    "bet_id": "string",
+    "price": "float",
+    "edge": "float",
+    "timestamp": "datetime"
+  },
+  "sources": [
+    "Poly Market API"
+  ]
+}

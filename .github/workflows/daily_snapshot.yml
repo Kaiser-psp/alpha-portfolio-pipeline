@@ -1,0 +1,28 @@
+name: Daily Portfolio Snapshot
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs at midnight UTC
+  workflow_dispatch:  # Allow manual triggers
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Install dependencies
+        run: pip install -r pipeline/requirements.txt
+      
+      - name: Fetch and upload data
+        env:
+          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+          GOOGLE_DRIVE_ACCESS_TOKEN: ${{ secrets.GOOGLE_DRIVE_ACCESS_TOKEN }}
+        run: |
+          python pipeline/fetch_data.py
+          python pipeline/upload_to_drive.py
