@@ -1,0 +1,182 @@
+{
+    "batch_id": "alpha001",
+    "timestamp": "2026-04-28T19:57:00Z",
+    "markets": [
+        {
+            "market_id": "0x1a2b3c4d5e6f7g8h9i0j",
+            "question": "Will the US CPI for May 2026 be below 2.5%?",
+            "volume_24hr": 124500,
+            "market_price": 0.42,
+            "model_probability": 0.55,
+            "edge": 0.13,
+            "kelly_size": 0.065,
+            "action": "long_yes",
+            "rationale": "Fed commentary + macro drift.",
+            "liquidity_check": {
+                "bid_depth": 5000,
+                "ask_depth": 5000,
+                "spread": 0.02
+            },
+            "timestamp": "2026-04-28T19:57:00Z"
+        },
+        {
+            "market_id": "0x2b3c4d5e6f7g8h9i0j1k",
+            "question": "Will the S&P 500 close above 5,500 by June 30?",
+            "volume_24hr": 89200,
+            "market_price": 0.58,
+            "model_probability": 0.45,
+            "edge": -0.13,
+            "kelly_size": 0.058,
+            "action": "short_no",
+            "rationale": "Overbought RSI + earnings season.",
+            "liquidity_check": {
+                "bid_depth": 4500,
+                "ask_depth": 4500,
+                "spread": 0.03
+            },
+            "timestamp": "2026-04-28T19:57:00Z"
+        },
+        {
+            "market_id": "0x3c4d5e6f7g8h9i0j1k2l",
+            "question": "Will Trump be convicted in any federal case by July 2026?",
+            "volume_24hr": 75600,
+            "market_price": 0.65,
+            "model_probability": 0.50,
+            "edge": -0.15,
+            "kelly_size": 0.075,
+            "action": "short_no",
+            "rationale": "Legal delays + jury sentiment.",
+            "liquidity_check": {
+                "bid_depth": 6000,
+                "ask_depth": 6000,
+                "spread": 0.01
+            },
+            "timestamp": "2026-04-28T19:57:00Z"
+        },
+        {
+            "market_id": "0x4d5e6f7g8h9i0j1k2l3m",
+            "question": "Will Bitcoin exceed $100k by September 2026?",
+            "volume_24hr": 68400,
+            "market_price": 0.38,
+            "model_probability": 0.48,
+            "edge": 0.10,
+            "kelly_size": 0.050,
+            "action": "long_yes",
+            "rationale": "Halving cycle + ETF inflows.",
+            "liquidity_check": {
+                "bid_depth": 3500,
+                "ask_depth": 3500,
+                "spread": 0.04
+            },
+            "timestamp": "2026-04-28T19:57:00Z"
+        },
+        {
+            "market_id": "0x5e6f7g8h9i0j1k2l3m4n",
+            "question": "Will the Fed cut rates by 25bps in June 2026?",
+            "volume_24hr": 52300,
+            "market_price": 0.72,
+            "model_probability": 0.55,
+            "edge": -0.17,
+            "kelly_size": 0.085,
+            "action": "short_no",
+            "rationale": "Inflation stickiness + dot plot.",
+            "liquidity_check": {
+                "bid_depth": 4000,
+                "ask_depth": 4000,
+                "spread": 0.02
+            },
+            "timestamp": "2026-04-28T19:57:00Z"
+        },
+        {
+            "market_id": "0x6f7g8h9i0j1k2l3m4n5o",
+            "question": "Will the UK general election be held by July 2026?",
+            "volume_24hr": 45800,
+            "market_price": 0.80,
+            "model_probability": 0.65,
+            "edge": -0.15,
+            "kelly_size": 0.075,
+            "action": "short_no",
+            "rationale": "PM Sunak’s approval ratings.",
+            "liquidity_check": {
+                "bid_depth": 3000,
+                "ask_depth": 3000,
+                "spread": 0.03
+            },
+            "timestamp": "2026-04-28T19:57:00Z"
+        },
+        {
+            "market_id": "0x7g8h9i0j1k2l3m4n5o6p",
+            "question": "Will the Tokyo 2026 Summer Olympics be canceled?",
+            "volume_24hr": 38900,
+            "market_price": 0.15,
+            "model_probability": 0.25,
+            "edge": 0.10,
+            "kelly_size": 0.050,
+            "action": "long_yes",
+            "rationale": "Geopolitical tensions + budget.",
+            "liquidity_check": {
+                "bid_depth": 2000,
+                "ask_depth": 2000,
+                "spread": 0.05
+            },
+            "timestamp": "2026-04-28T19:57:00Z"
+        },
+        {
+            "market_id": "0x8h9i0j1k2l3m4n5o6p7q",
+            "question": "Will Apple stock close above $220 by August 2026?",
+            "volume_24hr": 33500,
+            "market_price": 0.48,
+            "model_probability": 0.60,
+            "edge": 0.12,
+            "kelly_size": 0.060,
+            "action": "long_yes",
+            "rationale": "AI product cycle + buybacks.",
+            "liquidity_check": {
+                "bid_depth": 2500,
+                "ask_depth": 2500,
+                "spread": 0.04
+            },
+            "timestamp": "2026-04-28T19:57:00Z"
+        },
+        {
+            "market_id": "0x9i0j1k2l3m4n5o6p7q8r",
+            "question": "Will the US unemployment rate exceed 5% by Q4 2026?",
+            "volume_24hr": 29700,
+            "market_price": 0.30,
+            "model_probability": 0.42,
+            "edge": 0.12,
+            "kelly_size": 0.060,
+            "action": "long_yes",
+            "rationale": "Labor market cooling + layoffs.",
+            "liquidity_check": {
+                "bid_depth": 1500,
+                "ask_depth": 1500,
+                "spread": 0.06
+            },
+            "timestamp": "2026-04-28T19:57:00Z"
+        },
+        {
+            "market_id": "0x0j1k2l3m4n5o6p7q8r9s",
+            "question": "Will the EU ban combustion engine cars by 2030?",
+            "volume_24hr": 22100,
+            "market_price": 0.55,
+            "model_probability": 0.70,
+            "edge": 0.15,
+            "kelly_size": 0.075,
+            "action": "long_yes",
+            "rationale": "Green Deal acceleration.",
+            "liquidity_check": {
+                "bid_depth": 1800,
+                "ask_depth": 1800,
+                "spread": 0.05
+            },
+            "timestamp": "2026-04-28T19:57:00Z"
+        }
+    ],
+    "metadata": {
+        "model_used": "LightGBM + EWMA",
+        "memory_usage_mb": 180,
+        "timestamp": "2026-04-28T19:57:00Z",
+        "notes": "Alpha Batch 001: High-conviction mispricings with liquidity validation."
+    }
+}

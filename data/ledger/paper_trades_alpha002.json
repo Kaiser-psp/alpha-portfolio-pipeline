@@ -1,0 +1,79 @@
+{
+    "batch_id": "alpha002",
+    "timestamp": "2026-04-28T20:12:00Z",
+    "anchor_event": {
+        "market_id": "0xgta6_sep2026",
+        "question": "Will GTA VI be released before September 2026?",
+        "volume_24hr": 5100,
+        "market_price": 0.55,
+        "model_probability": 0.68,
+        "edge": 0.13,
+        "kelly_size": 0.065,
+        "action": "long_yes",
+        "rationale": "Bayesian model + Take-Two guidance.",
+        "liquidity_check": {
+            "bid_depth": 3200,
+            "ask_depth": 3200,
+            "spread": 0.02
+        }
+    },
+    "correlated_markets": [
+        {
+            "market_id": "0xbtc_1m_gta6",
+            "question": "Will Bitcoin hit $1M before GTA VI?",
+            "volume_24hr": 2747,
+            "market_price": 0.15,
+            "model_probability_x": 0.25,
+            "model_price_before_gta6": 0.37,
+            "edge": 0.22,
+            "kelly_size": 0.080,
+            "action": "long_yes",
+            "rationale": "Macro correlation + structural mispricing.",
+            "liquidity_check": {
+                "bid_depth": 1200,
+                "ask_depth": 1200,
+                "spread": 0.04
+            }
+        },
+        {
+            "market_id": "0xtrump_gta6",
+            "question": "Will Trump be out as President before GTA VI?",
+            "volume_24hr": 4532,
+            "market_price": 0.25,
+            "model_probability_x": 0.35,
+            "model_price_before_gta6": 0.51,
+            "edge": 0.26,
+            "kelly_size": 0.100,
+            "action": "long_yes",
+            "rationale": "Political correlation + structural mispricing.",
+            "liquidity_check": {
+                "bid_depth": 2000,
+                "ask_depth": 2000,
+                "spread": 0.03
+            }
+        },
+        {
+            "market_id": "0xcarti_gta6",
+            "question": "Will a new Playboi Carti album drop before GTA VI?",
+            "volume_24hr": 961,
+            "market_price": 0.40,
+            "model_probability_x": 0.50,
+            "model_price_before_gta6": 0.74,
+            "edge": 0.34,
+            "kelly_size": 0.120,
+            "action": "long_yes",
+            "rationale": "Cultural correlation + structural mispricing.",
+            "liquidity_check": {
+                "bid_depth": 800,
+                "ask_depth": 800,
+                "spread": 0.05
+            }
+        }
+    ],
+    "metadata": {
+        "model_used": "Bayesian Anchor + Structural Equivalence",
+        "memory_usage_mb": 120,
+        "timestamp": "2026-04-28T20:12:00Z",
+        "notes": "Alpha Batch 002: GTA 6 release arbitrage with correlated events."
+    }
+}
