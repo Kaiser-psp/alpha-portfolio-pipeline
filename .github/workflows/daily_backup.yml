@@ -1,0 +1,45 @@
+name: Daily Backup
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Runs at midnight UTC
+  workflow_dispatch:  # Allow manual triggers
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install gdown  # For Google Drive downloads
+
+      - name: Pull latest data from Google Drive (if accessible)
+        run: |
+          # Try to download from Google Drive
+          gdown --id 1wBSlODrJkSnSXd81-vywHGBNjmMraSzw -O AlphaPortfolioData.zip || true
+          if [ -f AlphaPortfolioData.zip ]; then
+            unzip AlphaPortfolioData.zip -d ./data
+            echo "Google Drive data pulled successfully." >> $GITHUB_STEP_SUMMARY
+          else
+            echo "Google Drive inaccessible. Using local fallback." >> $GITHUB_STEP_SUMMARY
+            mkdir -p ./data
+            # Copy local files (adjust paths as needed)
+            cp -r /home/ubuntu/polyrun/data/ledger/* ./data/ || true
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "Elias Throne Bot"
+          git config --global user.email "throneelliot@gmail.com"
+          git add .
+          git commit -m "Daily backup: $(date '+%Y-%m-%d %H:%M:%S UTC')" || echo "No changes to commit"
+          git push
